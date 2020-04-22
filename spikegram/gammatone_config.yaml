@@ -1,0 +1,10 @@
+common:
+  sample_rate: 16000
+
+gammatone:
+  min_freq: 20
+  min_bandwidth: 24.7
+  order: 4
+  number_of_channel: 32
+  ear_q: 9.26449
+  twin: 2048
