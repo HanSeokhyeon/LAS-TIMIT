@@ -2,7 +2,7 @@ import numpy as np
 import yaml
 import matplotlib.pyplot as plt
 
-config = yaml.load(open("gammatone_config.yaml", 'r'))
+config = yaml.load(open("gammatone_config.yaml", 'r'), Loader=yaml.FullLoader)
 
 
 def get_gammatone_filter():
@@ -23,10 +23,11 @@ def get_gammatone_filter():
 
     filter_sum = np.sum(np.power(gammatone_filter, 2), axis=1)
     gammatone_filter = gammatone_filter / np.power(filter_sum, 0.5)[:, None]
-    pass
 
+    # plt.plot(gammatone_filter[2].T)
+    # plt.show()
 
-
+    return gammatone_filter
 
 
 def make_erb_filter():
@@ -50,7 +51,6 @@ def make_erb_filter():
         erb[i] = np.power(np.power(center_freq[i]/ear_q, order) + np.power(min_bandwidth, order), 1/order)
 
     return center_freq, erb
-
 
 
 if __name__ == '__main__':
