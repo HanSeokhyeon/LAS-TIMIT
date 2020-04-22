@@ -1,6 +1,7 @@
 common:
   sample_rate: 16000
 
+
 gammatone:
   min_freq: 20
   min_bandwidth: 24.7

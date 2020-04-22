@@ -1,0 +1,10 @@
+data_path:
+  train: dataset/timit_dataset_list/TRAIN_list.csv
+  valid: dataset/timit_dataset_list/TEST_developmentset_list.csv
+  test: dataset/timit_dataset_list/TEST_coreset_list.csv
+
+common:
+  frame: 14336
+  twin: 2048
+  number_of_channel: 32
+

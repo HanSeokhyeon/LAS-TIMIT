@@ -2,7 +2,7 @@ import numpy as np
 import yaml
 import matplotlib.pyplot as plt
 
-config = yaml.load(open("gammatone_config.yaml", 'r'), Loader=yaml.FullLoader)
+config = yaml.load(open("spikegram/gammatone_config.yaml", 'r'), Loader=yaml.FullLoader)
 
 
 def get_gammatone_filter():
